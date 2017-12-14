@@ -1,0 +1,344 @@
+body{
+	font-family: 华文行楷,STXingkai;
+}
+
+header
+{
+	height: 10%;
+	background: #fff;
+}
+
+#nav
+{
+	width: 100%;
+	box-shadow: 0 4px 8px rgba(7,17,27,.1);
+	height: 100px;
+	margin-top: 2px;
+}
+
+div
+{
+	display: block;
+}
+
+#logo
+{
+	margin: 0 28px 0 24px;
+	float: left;
+}
+
+#logo a, .logo a
+{
+	display: block;
+	width: auto;
+	height: 72px;
+}
+
+.login-area{
+	margin-top: 48px;
+	float: right;
+	margin-right: 20px;
+}
+
+.header-signin a{
+	text-decoration: none;
+	color: #C0C0C0;
+}
+
+.header-signin a:hover{
+	color: greenyellow;
+}
+
+.login-area ul li{
+	list-style-type: none;
+}
+
+.search-box{
+   margin-top: 29px;
+   margin-left: 0px;
+   width: 300px;
+   height: 20px;
+   position: absolute;
+}
+
+.button{
+   width: 50px;
+   height: 35px;
+   margin-top: 29px;
+   margin-left: 422px;
+   background-color: #66afe9;
+   text-align: center;
+   color: white;
+   display: inline-block;
+   border: none;
+   border-radius: 4px;
+   border: 2px solid #4CAF50;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.search-box{
+	border: 1px solid #ccc;
+    padding: 7px 0px;
+    border-radius: 5px;
+    padding-left:120px;
+    
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+.search-box:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+.content{
+	width: 100%;
+	height: 542px;
+	background-color: #D4D4D4;
+	padding-top: 20px;
+}
+
+.content-box{
+	width: 73%;
+	height: 500px;
+	background-color: #000000;
+	margin-left: 14%;
+	border-radius: 15px;
+}
+
+footer{
+	background: #D4D4D4;
+	color: #D4D4D4;
+	text-align: center;
+}
+
+footer ul
+{
+	display: block;
+	margin: 0 auto;
+}
+
+footer li
+{
+	display: inline-block;
+	padding: 0px 10px;
+	margin-top: -10px;
+}
+
+.copy i{
+	font-style: normal;
+	margin:0 5px;
+}/*使字体不斜，为竖线*/
+.copy
+{
+	color: #000000;
+}
+
+.copy a{
+		text-decoration: none;
+		color: #000;
+}
+
+.left-area{
+	width: 20%;
+	height: 500px;
+	background-color: #000000;
+	border-radius: 15px;
+    float:left ;
+}
+
+.main-list{
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	padding-top: 0px;
+	float: left;
+}
+
+.main-list a{
+	margin-top: 5px;
+	width:80%;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.list-name{
+	padding-top: 40px;
+}
+
+.right-area{
+	width: 80%;
+	height: 500px;
+	background-color: #CCCCCC;
+	float: right;
+	border-radius: 15px;
+}
+
+#container {
+    position: relative;
+    width: 900px;
+    height: 494px;
+    border: 3px solid #333;
+    overflow: hidden;           
+}
+        
+#list {
+    position: absolute;
+    z-index: 1;
+    width: 4800px;
+    height: 494px;
+}
+        
+#list img {
+    float: left;
+    width: 900px;
+    height: 494px;
+}
+        
+#buttons {
+            position: absolute;
+            left: 400px;
+            bottom: 20px;
+            z-index: 2;
+            height: 10px;
+            width: 100px;
+        }
+        
+#buttons span {
+            float: left;
+            margin-right: 5px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background: #333;
+            cursor: pointer;
+        }
+        
+#buttons .on {
+            background: orangered;
+        }
+        
+.arrow {
+            position: absolute;
+            top: 180px;
+            z-index: 2;
+            display: none;
+            width: 30px;
+            height: 30px;
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 39px;
+            text-align: center;
+            color: #fff;
+            background-color: RGBA(0, 0, 0, .3);
+            cursor: pointer;
+        }
+        
+.arrow:hover {
+            background-color: RGBA(0, 0, 0, .7);
+        }
+        
+#container:hover .arrow {
+            display: block;
+        }
+        
+#prev {
+    left: 40px;
+}
+        
+#next {
+    right: 40px;
+}
+
+.VideoUpate-box{
+	width:40%;
+	height: 500px;
+	background-color:#FFFFFF;
+	margin-left: 30%;
+	border-radius: 15px;
+	line-height: 80px;
+}
+
+.Video-Content{
+	margin-left: 25%;
+}
+
+.PreviewBox{
+	width: 40%;
+	height: 101px;
+	border: dashed;
+	margin-left: 18%;
+}
+
+.PreviewBox img{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.VideoUpdate-Button{
+	margin-left: 25%;
+}
+
+.UpdateInput{
+	width: 25%;
+}
+
+.UpdateInput{
+	background-color: #EE7600;
+}
+
+.SelfMes{
+	width: 50%;
+	height: 80%;
+	background-color: #66AFE9;
+	margin-left: 25%;
+	border-radius: 2%;
+	line-height: 35px;
+}
+
+.BoFangcontent{
+	width: 100%;
+	height: 700px;
+	background-color: #D4D4D4;
+	padding-top: 20px;
+}
+
+.BoFangcontent-box{
+	width: 80%;
+	height: 600px;
+	background-color: #D4D4D4;
+	margin-left: 25%;
+	border-radius: 15px;
+	
+}
+
+.BiaoTi{
+	margin-left: 20%;
+	padding-top: 20px;
+}
+
+.inbox{
+	width: 70%;
+	height: 550px;
+	background-color: #fff;
+    margin-top: 10px;
+	border-radius: 5px;
+}
+
+.PLbutton{
+	margin-left: 70%;
+	background-color: #FF4500;
+	text-decoration: none;
+	margin-top: 10px;
+}

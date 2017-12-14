@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录页</title>
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/alert.css" />
+		<script type="text/javascript" src="js/alert.js" ></script>
+			<script type="text/javascript">
+			function validate()
+			{
+				//得到这两个文本框的内容
+				Account = document.loginForm.Account.value;
+				PassWord = document.loginForm.PassWord.value;
+				if(Account == "")
+				{
+					alertMsg("账号不能为空",0);
+					document.loginForm.Account.focus();//将光标聚焦在这
+					return;
+				}
+				else if(PassWord == "")
+				{
+			      alertMsg("密码不能为空",0);
+			      document.loginForm.PassWord.focus();
+			      return;
+				}
+				document.loginForm.Submit();          //提交表单，与登录按钮效果相同
+			}
+		</script>
+	</head>
+	<body>
+		<header>  <!--头部-->
+			<div class="page-container" id="nav">
+				 <div id="logo" class="logo">
+				 	 <a href="index.html" target="_self" title="首页">
+				 	 	<img title="趣盒" src="img/logo.png"  />
+				 	 </a>
+				 </div>
+			</div>
+		</header> 
+		<div class="content">  <!--内容区-->
+			<div class="login-box">
+				<div class="login-logo"><img src="img/Login.png"/></div>
+				<form name="loginForm" action="servlet/LoginServlet" method="post">
+				<div class="login-area">
+				    <div class="account">账号：<input type="text" name="Account" placeholder="请输入账号" /></div>
+				    <div class="password">密码：<input type="password" name="PassWord" placeholder="请输入密码"/></div>
+				</div>
+				<div class="login-button"><button type="submit" onclick="validate()"><p style="font-family: '微软雅黑';">login</p></button></div>
+                </form>
+                <div class="register-a"><p><a href="register.html" target="_self" >还未注册？</a></p></div>
+			</div>
+		</div>
+				<footer><!--脚注-->
+				<ul class="share-group">
+				<li><a href="https://weibo.com/" target="_blank"><img src="img/新浪微博.png"/></a></li>
+				<li><a href="https://www.baidu.com/" target="_blank"><img src="img/百度.png"/></a></li>
+				<li><a href="http://www.qq.com/" target="_blank"><img src="img/腾讯.png"/></a></li>
+				<li><a href="https://qzone.qq.com/" target="_blank"><img src="img/空间.png"/></a></li>
+			    </ul>
+			<div class="copy">
+				<p><a href="#">趣盒简介</a><i>|</i><a href="#">趣盒公告</a><i>|</i><a href="#">招贤纳士</a><i>|</i><a href="#">联系我们</a></p>
+				   &copy; 趣盒 2017年（1.0版本）闽ICP备 xxxxxxxx号
+				
+			</div>
+		</footer>
+	</body>
+</html>

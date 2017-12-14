@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>VideoUpate</title>
+<script type="text/javascript">
+    function imgPreview(fileDom){
+        //判断是否支持FileReader
+        if (window.FileReader) {
+            var reader = new FileReader();
+        } else {
+            alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+        }
+
+        //获取文件
+        var file = fileDom.files[0];
+        var imageType = /^image\//;
+        //是否是图片
+        if (!imageType.test(file.type)) {
+            alert("请选择图片！");
+            return;
+        }
+        //读取完成
+        reader.onload = function(e) {
+            //获取图片dom
+            var img = document.getElementById("preview");
+            //图片路径设置为读取的图片
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+</script>
+<script type="text/javascript" src="js/VideoUpdate.js" ></script>
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<body >
+		<header>  <!--头部-->
+			<div class="page-container" id="nav">
+				 <div id="logo" class="logo">
+				 	 <a href="index.html" target="_self" title="首页">
+				 	 	<img title="趣盒" src="img/logo.png"  />
+				 	 </a>
+				 </div>
+				 
+				 <div class="login-area">
+				 	<ul class="header-unlogin clearfix">
+				 		<li class="header-signin">
+				 			<a href="me.html"  target="_self">我的信息</a> 
+				 		</li>
+				 	</ul>
+				 </div>
+			</div>
+		</header> 
+		<div class="content">  <!--内容区-->
+            <div class="VideoUpate-box">
+            <form action="UploadVideoServlet.do">
+             <div class="Video-Content">
+            	<div class="Video-name">
+            		视频名称：<input class="VideoName" type="text" name="videoname" placeholder="请输入视频名称" />
+            	</div>
+            	<div class="Video-Pic">
+            		视频封面：<input  type="file" name="file" onchange="imgPreview(this)" placeholder="请选择视频封面" />
+            	</div>
+            	<div class="VideoPicPre">
+            		封面预览：<div class="PreviewBox"><img id="preview" /></div>
+            	</div>
+            	<div class="VideoPath">
+            		视频路径：<input name="VideoAddress" type="text" />
+            	</div>
+            	<div class="VideoUpdate-Button"><input class="UpdateInput" type="submit" value="上传"/></div>
+              </div>
+              </form>
+            </div>
+				
+
+		</div>
+
+		<footer><!--脚注-->
+				<ul class="share-group">
+				<li><a href="https://weibo.com/" target="_blank"><img src="img/新浪微博.png"/></a></li>
+				<li><a href="https://www.baidu.com/" target="_blank"><img src="img/百度.png"/></a></li>
+				<li><a href="http://www.qq.com/" target="_blank"><img src="img/腾讯.png"/></a></li>
+				<li><a href="https://qzone.qq.com/" target="_blank"><img src="img/空间.png"/></a></li>
+			    </ul>
+			<div class="copy">
+				<p><a href="#">趣盒简介</a><i>|</i><a href="#">趣盒公告</a><i>|</i><a href="#">招贤纳士</a><i>|</i><a href="#">联系我们</a></p>
+				&copy; 趣盒 2017年（1.0版本）闽ICP备 xxxxxxxx号
+				
+			</div>
+		</footer>
+		
+</body>
+</html>
