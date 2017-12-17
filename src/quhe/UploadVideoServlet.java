@@ -16,6 +16,11 @@ import dbtool.DBtool;
 public class UploadVideoServlet extends HttpServlet {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9146137172845437003L;
+
+	/**
 	 * Constructor of the object.
 	 */
 	public UploadVideoServlet() {
@@ -48,6 +53,10 @@ public class UploadVideoServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		HttpSession session=request.getSession();
+		int beginIndex,endIndex;
+		beginIndex=0;
+		endIndex=0;
+		String v_http;
 		
 		try{
 			Connection conn=DBtool.getConnection();
@@ -56,9 +65,19 @@ public class UploadVideoServlet extends HttpServlet {
 			String v_name=new String(request.getParameter("videoname").getBytes("ISO-8859-1"),"utf-8");
 			String v_address=request.getParameter("VideoAddress");
 			String v_user_id=(String)session.getAttribute("userid");
+			//Ωÿ»° ”∆µµÿ÷∑
+			//<iframe height=498 width=510 
+			//src='http://player.youku.com/embed/XMzE3Mjk2NDY2OA==' 
+			//frameborder=0 'allowfullscreen'></iframe>
+			
+			beginIndex=v_address.indexOf("http");
+			endIndex=v_address.indexOf("' ");
+			
+			v_http=v_address.substring(beginIndex, endIndex);
+			
 			
 			String sql = "insert into videoinfo(video_name,video_address,user_id) "
-					+ "values('" + v_name + "', '" + v_address + "','"+ v_user_id+ "')";
+					+ "values('" + v_name + "', '" + v_http + "','"+ v_user_id+ "')";
 			
 			stmt.executeUpdate(sql);
 			stmt.close();

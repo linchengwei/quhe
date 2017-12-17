@@ -19,6 +19,27 @@
     <servlet-name>UploadVideoServlet</servlet-name>
     <servlet-class>quhe.UploadVideoServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>VideoShowServlet</servlet-name>
+    <servlet-class>quhe.VideoShowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ListServlet</servlet-name>
+    <servlet-class>quhe.ListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BoFangServlet</servlet-name>
+    <servlet-class>quhe.BoFangServlet</servlet-class>
+  </servlet>
+
+
+
 
 
 
@@ -34,7 +55,27 @@
     <servlet-name>UploadVideoServlet</servlet-name>
     <url-pattern>/UploadVideoServlet.do</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VideoShowServlet</servlet-name>
+    <url-pattern>/VideoShowServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListServlet</servlet-name>
+    <url-pattern>/ListServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BoFangServlet</servlet-name>
+    <url-pattern>/BoFangServlet.do</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
+    <filter>
+        <filter-name>EncodinFilter</filter-name>
+        <filter-class>quhe.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodinFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
 </web-app>

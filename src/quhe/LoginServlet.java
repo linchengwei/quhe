@@ -17,6 +17,11 @@ import dbtool.DBtool;
 public class LoginServlet extends HttpServlet {
 
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1150789479290341075L;
+
 	public LoginServlet() {
 		super();
 	}

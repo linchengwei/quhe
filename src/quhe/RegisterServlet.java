@@ -8,9 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
-import java.util.*;
+
 import dbtool.*;
 public class RegisterServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1697322288998053376L;
 
 	/**
 	 * Constructor of the object.

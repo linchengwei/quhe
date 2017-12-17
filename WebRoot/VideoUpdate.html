@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>VideoUpate</title>
-<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
 <script type="text/javascript">
     function imgPreview(fileDom){
         //判断是否支持FileReader
@@ -30,8 +29,6 @@
         };
         reader.readAsDataURL(file);
     }
-    
-    
 </script>
 <script type="text/javascript" src="js/VideoUpdate.js" ></script>
 <link rel="stylesheet" href="css/main.css" />
@@ -40,7 +37,7 @@
 		<header>  <!--头部-->
 			<div class="page-container" id="nav">
 				 <div id="logo" class="logo">
-				 	 <a href="index.html" target="_self" title="首页">
+				 	 <a href="index2.html" target="_self" title="首页">
 				 	 	<img title="趣盒" src="img/logo.png"  />
 				 	 </a>
 				 </div>
@@ -56,7 +53,7 @@
 		</header> 
 		<div class="content">  <!--内容区-->
             <div class="VideoUpate-box">
-            <form action="UploadVideoServlet.do">
+            <form action="/quhe/UploadVideoServlet.do">
              <div class="Video-Content">
             	<div class="Video-name">
             		视频名称：<input class="VideoName" type="text" name="videoname" placeholder="请输入视频名称" />
@@ -68,11 +65,12 @@
             		封面预览：<div class="PreviewBox"><img id="preview" /></div>
             	</div>
             	<div class="VideoPath">
-            		视频路径：<input class="video_path" name="VideoAddress" type="text" />
+            		视频路径：<input name="VideoAddress" type="text" />
             	</div>
             	<div class="VideoUpdate-Button"><input class="UpdateInput" type="submit" value="上传"/></div>
               </div>
               </form>
+              
             </div>
 				
 
