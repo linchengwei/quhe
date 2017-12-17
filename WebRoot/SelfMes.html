@@ -5,9 +5,18 @@
 		<title>SelfMes</title>
         <link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/reset.css" />
-
-
-		
+    <script>
+         function $(v){
+         	return document.getElementById(v);
+         }
+         var x=0;
+         function c(y){
+           $("a"+x).style.display = "none";
+           $("a"+y).style.display = "";
+           x=y
+          }
+ 
+    </script>
 	</head>
 	<body>
 		<header>  <!--头部-->
@@ -28,33 +37,67 @@
 				 </div>
 				 
 
-				
 			</div>
 		</header> 
 		<div class="content">  <!--内容区-->
 		     <div class="SelfMes">
-		     	<div class="MesBox">
-		     		<div class="account" >
-		     			用户名：
+		     	<div class="SelfLeft">
+		     		<div class="Photo-Box">
+		     			<img src="img/touxiang.png" />
 		     		</div>
-		     		<div class="shcool">
-		     			学校：
+                    <div class="SelfMes-Box">
+                    	<div class="Self">
+                    		<a href="javascript:;" onclick="c(0);">个人信息</a>
+                    	</div>
+                    	<div class="Friends">
+                    		<a href="javascript:;" onclick="c(1);">联系人</a>
+                    	</div>
+		     		    <div class="UpdatedVideo">
+		     			    <a href="javascript:;" onclick="c(2);">管理视频</a>
+		     		    </div>
+		     		    <div class="ShouCang">
+		     		    	<a href="javascript:;" onclick="c(3);">收藏</a>
+		     		    </div>
 		     		</div>
-		     		<div class="xuehao">
-		     			学号：
+		     	</div>
+		     	<div class="SelfRight">
+		     		<div id="a0" style="display:none ;">
+		     		<div class="all">
+		     		   <div class="User_id" >
+		     			 学号（账号）：
+		     		   </div>
+		     		   <div class="User_name">
+		     			 真实姓名：
+		     		   </div>
+		     		   <div class="College">
+		     			 学校：
+		     		   </div>
+		     		   <div class="Major">
+		     			 专业：
+		     		   </div>
+		     		   <div class="Class">
+		     			 班级：
+		     		   </div>
 		     		</div>
-		     		<div class="UpdatedVideo">
-		     			上传的视频：
 		     		</div>
+		     		<div id="a1" style="display:none ;">
+                    	联系人：
+                    </div>
+                    <div id="a2" style="display:none ;">
+                    	视频：
+                    </div>
+                    <div id="a3" style="display:none ;">
+                    	收藏：
+                    </div>
 		     	</div>
 		     </div>
 		</div>
 		<footer><!--脚注-->
 				<ul class="share-group">
-				<li><a href="https://weibo.com/" target="_blank"><img src="img/新浪微博.png"/></a></li>
-				<li><a href="https://www.baidu.com/" target="_blank"><img src="img/百度.png"/></a></li>
-				<li><a href="http://www.qq.com/" target="_blank"><img src="img/腾讯.png"/></a></li>
-				<li><a href="https://qzone.qq.com/" target="_blank"><img src="img/空间.png"/></a></li>
+				<li><a href="https://weibo.com/" target="_blank"><img src="img/xinlang.png"/></a></li>
+				<li><a href="https://www.baidu.com/" target="_blank"><img src="img/baidu.png"/></a></li>
+				<li><a href="http://www.qq.com/" target="_blank"><img src="img/tengxun.png"/></a></li>
+				<li><a href="https://qzone.qq.com/" target="_blank"><img src="img/kongjian.png"/></a></li>
 			    </ul>
 			<div class="copy">
 				<p><a href="#">趣盒简介</a><i>|</i><a href="#">趣盒公告</a><i>|</i><a href="#">招贤纳士</a><i>|</i><a href="#">联系我们</a></p>

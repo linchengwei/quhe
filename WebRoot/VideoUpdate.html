@@ -53,7 +53,7 @@
 		</header> 
 		<div class="content">  <!--内容区-->
             <div class="VideoUpate-box">
-            <form action="/quhe/UploadVideoServlet.do">
+            <form action="/quhe/UploadVideoServlet.do" method="post" enctype="multipart/form-data">
              <div class="Video-Content">
             	<div class="Video-name">
             		视频名称：<input class="VideoName" type="text" name="videoname" placeholder="请输入视频名称" />
@@ -68,6 +68,7 @@
             		视频路径：<input name="VideoAddress" type="text" />
             	</div>
             	<div class="VideoUpdate-Button"><input class="UpdateInput" type="submit" value="上传"/></div>
+            	
               </div>
               </form>
               

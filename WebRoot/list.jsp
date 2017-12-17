@@ -113,6 +113,7 @@ function handlePaginationClick(new_page_index, pagination_container) {
 				<div>
 					<div>
 						<a href='/quhe/BoFangServlet.do?id=<c:out value="${video.video_id }"></c:out>'><c:out value="${video.video_name }"></c:out></a>
+						<img alt="tupian" src="/img/${video.video_img }">
 					</div>
 					
 					<hr>
